@@ -1,0 +1,78 @@
+/* Styles for the page container */
+.page-container {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+/* Styles for the center container */
+.center-container {
+  width: 100%; /* Full width */
+  max-width: 400px; /* Adjust as needed */
+}
+
+/* Styles for the form container (both login and registration) */
+.container {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px; /* Add border radius */
+}
+
+/* Styles for the registration form */
+.registration-form {
+  background-color: #f5f5f5; /* Background color for the registration form */
+  border: 1px solid #ddd; /* Border for the registration form */
+  padding: 20px; /* Add padding */
+  border-radius: 8px; /* Add border radius */
+}
+
+/* Styles for the card */
+.card {
+  border-radius: 8px; /* Add border radius */
+}
+
+/* Styles for the card header */
+.card-header {
+  background-color: #007bff; /* Header background color */
+  color: #fff; /* Header text color */
+  padding: 10px; /* Add padding */
+  border-top-left-radius: 8px; /* Add border radius */
+  border-top-right-radius: 8px; /* Add border radius */
+}
+
+/* Styles for the card body */
+.card-body {
+  padding: 20px; /* Add padding */
+}
+
+/* Styles for the form group */
+.form-group {
+  margin-bottom: 20px; /* Add margin bottom */
+}
+
+/* Styles for the form control */
+.form-control {
+  border-radius: 8px; /* Add border radius */
+}
+
+/* Styles for the invalid feedback */
+.invalid-feedback {
+  color: #dc3545; /* Error text color */
+}
+
+/* Styles for the submit button */
+.btn-primary {
+  border-radius: 8px; /* Add border radius */
+}
+
+/* Styles for the success message */
+.alert-success {
+  background-color: #d4edda; /* Success message background color */
+  color: #155724; /* Success message text color */
+  border: 1px solid #c3e6cb; /* Success message border color */
+  border-radius: 8px; /* Add border radius */
+  padding: 10px 20px; /* Add padding */
+  margin-bottom: 20px; /* Add margin bottom */
+}

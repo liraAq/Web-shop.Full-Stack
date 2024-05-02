@@ -1,0 +1,54 @@
+/* Horizontal header styles */
+.horizontal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #333; /* Change this to your preferred background color */
+  color: #fff; /* Change this to your preferred text color */
+}
+
+.horizontal-header .logo img {
+  height: 40px; /* Adjust the logo height as needed */
+}
+
+.horizontal-header nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.horizontal-header nav ul li {
+  font-size: 18px; /* Adjust the font size as needed */
+}
+
+.horizontal-header nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.horizontal-header nav ul li a:hover,
+.horizontal-header nav ul i:hover {
+  color: #ff6600; /* Change this to your preferred hover color */
+}
+
+/* Additional styles */
+.small-text {
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.small-text a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.small-text a:hover {
+  text-decoration: underline;
+}
+
+.bigger-heart {
+  font-size: 20px; /* Adjust the size as needed */
+}

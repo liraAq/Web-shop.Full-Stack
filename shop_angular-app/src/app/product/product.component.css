@@ -1,0 +1,90 @@
+/* Global styles for product cards */
+.product-card {
+  background-color: #333;
+  color: #fff;
+  transition: transform 0.2s;
+  margin-top: 5px;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+/* Additional styles for specific elements */
+.card-title {
+  font-size: 1.25rem;
+}
+
+/* Customize the out-of-stock message */
+.alert-warning {
+  background-color: #ff9800;
+  color: #333;
+}
+
+.container {
+  margin-bottom: 75px;
+}
+
+.content-before-footer {
+  margin-bottom: 200px;
+}
+
+/* product.component.css */
+
+/* Styles for sorting dropdown container */
+.sort-dropdown-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Styles for sorting dropdown */
+.sort-dropdown {
+  position: relative;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Styles for the sorting options list */
+.sort-options-list {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+/* Styles for each sorting option */
+.sort-option {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.sort-option:hover {
+  background-color: #f4f4f4;
+}
+
+/* Show sorting options on hover */
+.sort-dropdown:hover .sort-options-list {
+  display: block;
+}
+
+/* Styles for individual product cards in the product component */
+.product-card {
+  /* Add your existing styles for product cards here */
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Styles for the favorite button container */
+.favorite-btn-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+}

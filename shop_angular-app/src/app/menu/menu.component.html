@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+<header class="horizontal-header">
+    <div class="logo">
+        <!-- <img src="assets/logo.png" alt="Fruit Shop Logo"> -->
+    </div>
+    <nav>
+        <ul>
+            <li *ngIf="isAdmin"><a routerLink="admin/products">Add Product</a></li>
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="/products">Products</a></li>
+            <li><a routerLink="/about">About Us</a></li>
+            <li><a routerLink="/contact">Contact Us</a></li>
+
+            <li>
+                <a *ngIf="isLoggedin; else loginLink"  [routerLink]="userCabinetLink">
+                    <i class="fas fa-user"></i>
+                </a>
+                <ng-template #loginLink>
+                    <a [routerLink]="loginPageLink">
+                        <i class="fas fa-sign-in-alt"></i>
+                    </a>
+                </ng-template>
+            </li>
+
+            <li>
+                <a class="nav-link" [routerLink]="['/favorites']">
+                    <i class="fas fa-heart bigger-heart"></i>
+                </a>
+            </li>
+
+            <li (click)="openCart()">
+                <div class="cart-icon">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="cart-counter">{{ cartItemsCount }}</span>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>

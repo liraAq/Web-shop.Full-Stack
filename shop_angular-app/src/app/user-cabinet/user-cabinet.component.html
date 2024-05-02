@@ -1,0 +1,61 @@
+<!-- user-cabinet.component.html -->
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="card">
+        <div class="card-header bg-primary text-white">
+          <h3 class="mb-0">Welcome to Your User Cabinet, {{ user.name }}!</h3>
+        </div>
+        <div class="card-body">
+
+          <!-- User Profile Section -->
+          <div class="mb-4">
+            <form (ngSubmit)="updateProfile()" [formGroup]="userForm">
+              <div class="form-group">
+                <label for="newName">New Name:</label>
+                <input type="text" id="newName" formControlName="newName" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="newPassword">New Password:</label>
+                <input type="password" id="newPassword" formControlName="newPassword" class="form-control">
+              </div>
+              <button type="submit" class="btn btn-primary">Update Profile</button>
+            </form>
+          </div>
+
+          <!-- Orders Section -->
+          <div>
+            <h4>Your Orders</h4>
+            <ul class="list-group">
+              <li *ngFor="let order of userOrders" class="list-group-item mb-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span>Order ID: {{ order.orderId }}</span>
+                  <span>Total Amount: {{ order.totalAmount }}$</span>
+                </div>
+                <div>
+                  Date: {{ order.orderDate }}<br>
+                  Delivery Address: {{ order.deliveryAddress }}<br>
+                  Order Status: {{ order.orderStatus }}
+                </div>
+                
+                
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Logout Button -->
+    <div class="col-lg-4 mt-4 mt-lg-0">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Account Actions</h5>
+          <button (click)="logout()" class="btn btn-danger btn-block">Logout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

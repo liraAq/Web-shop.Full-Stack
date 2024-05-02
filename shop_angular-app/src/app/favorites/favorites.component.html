@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+    <div *ngFor="let favoriteProduct of favoriteProducts" class="col">
+      <div class="card h-100 product-card">
+        <img [src]="favoriteProduct.image_url" class="card-img-top img-fluid" alt="{{ favoriteProduct.name }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ favoriteProduct.name }}</h5>
+          <p class="card-text">Price: ${{ favoriteProduct.price.toFixed(2) }} / kg</p>
+          <p class="card-text">
+            <span [ngClass]="{'text-success': favoriteProduct.in_stock, 'text-danger': !favoriteProduct.in_stock}">
+              {{ favoriteProduct.in_stock ? 'In Stock: Yes' : 'In Stock: No' }}
+            </span>
+          </p>
+        </div>
+        <div class="card-footer d-grid">
+          <button class="btn btn-primary addToCart" (click)="addToCartFromFavorites(favoriteProduct)">
+            Add to Cart
+          </button>
+          <a [routerLink]="['/product', favoriteProduct.id]" class="btn btn-secondary viewDetails">
+            View Details
+          </a>
+          <button class="btn btn-outline-secondary remove-button" (click)="removeFromFavorites(favoriteProduct.id)">
+            Remove from Favorites
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

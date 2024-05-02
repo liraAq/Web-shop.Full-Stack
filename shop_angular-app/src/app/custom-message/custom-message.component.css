@@ -1,0 +1,20 @@
+/* success-message.component.css */
+
+.success-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-size: 24px; /* Adjust the font size as needed */
+  }
+  
+  .icon {
+    font-size: 40px; /* Adjust the icon size as needed */
+    margin-right: 10px;
+  }
+  

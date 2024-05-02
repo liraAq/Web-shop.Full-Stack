@@ -1,0 +1,70 @@
+<div class="order-submission-container">
+  <!-- Order Information (Left Side) -->
+  <div class="order-information">
+    <h2>Your Order</h2>
+
+    <form (submit)="submitOrder()">
+      <div class="form-group">
+        <label for="deliveryMethod">Delivery Method:</label>
+        <div class="radio-options">
+          <label>
+            <input type="radio" name="deliveryMethod" [(ngModel)]="deliveryMethod" value="delivery">
+            Delivery
+          </label>
+          <label>
+            <input type="radio" name="deliveryMethod" [(ngModel)]="deliveryMethod" value="pickup">
+            Pickup
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group" *ngIf="deliveryMethod === 'delivery'">
+        <label for="shippingAddress">Shipping Address:</label>
+        <input type="text" id="shippingAddress" [(ngModel)]="shippingAddress" name="shippingAddress" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="contactEmail">Contact Email:</label>
+        <input type="email" id="contactEmail" [(ngModel)]="contactEmail" name="contactEmail" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="paymentMethod">Payment Method:</label>
+        <select class="form-select" id="paymentMethod" name="paymentMethod" [(ngModel)]="paymentMethod" (change)="onPaymentMethodChange($event)">
+          <option value="CreditCard">Credit Card</option>
+          <option value="PayPal">PayPal</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit Order</button>
+
+      <div *ngIf="deliveryMethod === 'pickup'" class="center-container warehouse-address-sidebar">
+        <div class="warehouse-address">
+          <h3>Warehouse Address</h3>
+          <p>Your order will be ready for pickup at our warehouse:</p>
+          <address>
+            123 Warehouse Street<br>
+            City, State, Zip Code<br>
+            Country
+          </address>
+        </div>
+      </div>
+
+      <ng-container *ngIf="customMessage && showCustomMessage">
+        <app-custom-message></app-custom-message>
+      </ng-container>>
+    </form>
+  </div>
+  
+
+  <!-- Selected Products (Right Side) -->
+  <div class="selected-products">
+    <h3>Selected Products:</h3>
+    <ul>
+      <li *ngFor="let product of selectedProducts">
+        <img [src]="product.image_url" alt="{{ product.name }}" class="product-image small-image with-spacing">
+        {{ product.name }} (Quantity: {{ product.quantity }})
+      </li>
+    </ul>
+  </div>
+</div>

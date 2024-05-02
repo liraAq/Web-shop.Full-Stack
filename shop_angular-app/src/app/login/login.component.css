@@ -1,0 +1,52 @@
+/* Styles for the page container */
+.page-container {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+/* Styles for the center container */
+.center-container {
+  width: 100%; /* Full width */
+  max-width: 400px; /* Adjust as needed */
+}
+
+/* Create a class for error messages */
+.error-message {
+  color: #ff0000; /* Red color for error text */
+  font-size: 14px;
+  margin-top: 5px; /* Add some spacing above the error message */
+  margin-bottom: 0; /* Remove bottom margin */
+}
+
+/* Additional Improvements */
+
+/* Add hover effects to buttons */
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Style the link for registration */
+.text-center a {
+  color: #007bff; /* Blue color for links */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth transition on color change */
+}
+
+.text-center a:hover {
+  color: #0056b3; /* Darker blue color on hover */
+}
+
+/* Apply consistent padding to form inputs */
+.form-control {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px; /* Add some spacing between inputs */
+}
+
+/* Add box-shadow to form container */
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

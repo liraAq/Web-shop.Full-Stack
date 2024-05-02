@@ -1,0 +1,78 @@
+.container.product-details {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-name {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.product-description h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.product-description p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.product-description p strong {
+  font-weight: bold;
+}
+
+.product-description p:last-child {
+  margin-bottom: 0;
+}
+
+.status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.in-stock {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.out-of-stock {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top:10px;
+  margin-right: 10px; /* Add spacing between buttons */
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  background-color: #2185d0;
+}

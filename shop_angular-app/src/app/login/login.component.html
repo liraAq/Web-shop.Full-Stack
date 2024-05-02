@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+
+</head>
+<body>
+  <div class="page-container">
+    <div class="center-container">
+      <div class="container">
+        <div class="card">
+          <div class="card-header">Login</div>
+          <div class="card-body">
+            <form (ngSubmit)="onSubmit()" #loginForm="ngForm" novalidate>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  [(ngModel)]="user.email"
+                  class="form-control"
+                  required
+                  email
+                />
+                <div *ngIf="loginForm.submitted && loginForm.controls['email'].errors?.['required']" class="error-message">
+                  Email is required.
+                </div>
+                <div *ngIf="loginForm.submitted && loginForm.controls['email'].errors?.['email']" class="error-message">
+                  Please enter a valid email address.
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="password">Password:</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  [(ngModel)]="user.password"
+                  class="form-control"
+                  required
+                />
+                <div *ngIf="loginForm.submitted && loginForm.controls['password'].errors?.['required']" class="error-message">
+                  Password is required.
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+              <div *ngIf="errorMessage" class="error-message">
+                {{ errorMessage }}
+              </div>              
+            </form>
+            
+          </div>
+        </div>
+        <p class="text-center mt-3">
+          Don't have an account? <a href="/register">Register here</a>
+        </p>
+      </div>
+      
+    </div>
+  </div>
+  <footer class="footer">
+    <!-- Footer content -->
+  </footer>
+
+  <div class="error-container">
+    <div class="error-message">{{ errorMessage }}</div>
+  </div>
+</body>
+</html>
